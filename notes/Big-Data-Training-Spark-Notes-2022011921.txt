@@ -1,0 +1,43 @@
+--Spark
+    Hadoop Cluster RAM Memory - 4GB
+	Processing File Size - 10 GB
+	
+ create table hivedemo_060122.stg_state_1 as 
+ select distinct statename from hivedemo_060122.rawdata_012019(10 GB) ;
+ 
+ 1st stage 4 GB temp1 HDFS file
+ 2nd Stage Distinct Statename result1 HDFS1 file
+ 3 rd Stage Next 4GB Temp2 HDFS file
+ 4th State Distinct second Temp2 result HDFS2
+ 5 th Stage Next 2GB Temp3 HDFS file
+ 6th State Distinct second Temp3 result HDFS3
+ 7th stage result1 HDFS1,result1 HDFS2  and result1 HDFS3 Memory
+ 8th stage Distinct Statename and Write into the Target table HDFS file
+ 
+ -- Spark - Parallel Processing Memory	RAM
+	-- Source Data HDFS
+	-- Spark reads source data it creates DataSet/DataFrame/RDD Memory
+	
+
+Import/Export
+ --  Declare The Declaration
+  -- IT System
+  -- Fire Arms/ Raw Material Fire Works
+  -- Border Security Force / UK Police Department / Specialise Unit (30 Seconds)
+  -- 30 Billion declarations 
+  -- Declaration Type - Vegetables - Dangerous goods
+  -- Web Front End - Search Enginee
+  
+  
+  
+-- Languages
+	Jave
+	Scala - Spark-shell
+	Python - pyspark
+	
+-- Spark Functionality
+	-- Readers (read the data from HDFS (or) Any Other Storage Systems
+	-- Transform The Data - Programming Language --- SQL Enginee
+	-- Writing Final Output Back to HDFS (or) Storage System
+	
+ 

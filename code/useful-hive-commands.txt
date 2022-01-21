@@ -31,4 +31,31 @@ LOCATION '/src/data/raw/demo_1401_1/
  ADD JAR /usr/hdp/current/hive-client/lib/commons-httpclient-3.0.1.jar
  
  -- Create table from existing Table
- create table hivedemo_060122.stg_state_1 as select distinct statename from hivedemo_060122.rawdata_012019 ;
+ create table hivedemo_060122.stg_state_1 as 
+ select distinct statename from hivedemo_060122.rawdata_012019 ;
+ 
+ --Craeting Sequence Number of Each Unique Source Records
+ create table hivedemo_060122.stg_state_2 as  
+ select row_number() over(order by statename) as state_id,statename from hivedemo_060122.stg_state 
+ where statename is not null;
+ 
+  -- Create Dimension Table
+create table hivedemo_060122.dim_state(
+state_id bigint,
+statename  String
+)
+
+ 
+ -- MERGE the Data into to Perform Insert and Update
+ MERGE INTO hivedemo_060122.dim_state dim 
+ USING hivedemo_060122.stg_state_2 staging ON dim.state_id = staging.state_id 
+WHEN MATCHED THEN UPDATE SET statename = staging.statename
+WHEN NOT MATCHED THEN INSERT values(staging.state_id,staging.statename);
+
+ -- Create Dimension Table
+create table hivedemo_060122.dim_state(
+state_id bigint,
+statename  String
+)
+
+-- show create table rawdata_012019;

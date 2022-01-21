@@ -1,0 +1,25 @@
+-- Overview Datafactory
+	-- Linked Services
+	--Datasets
+	--Pipeline
+	-- Activities
+	-- Activities scenarios
+	-- Global Parameters
+	
+-- Scerio 
+ -- Copy file from one storage account to another storage account ( )
+ -- How to populate Dimension Table Without Hiostory (dataflow) (No Slowly Changing Dimension)
+ -- How to populate Dimension Table With Hiostory (dataflow) (slowly Dimension)
+ -- How to Populate Fact Tables (dataflow)
+ -- Pre Process data to format better structure
+ -- Aggregate tables
+ -- Denormalising Source data
+ -- How to develop the pipelines rerunnable
+ -- Calling from one pipelines
+ -- Calling from Dataflow
+ 
+ 10 Weeks of 2 Hours sessions
+ 
+150 USD -- Paypal (or) Business Account USD
+ 
+ 9:00 to 11

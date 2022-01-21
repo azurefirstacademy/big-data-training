@@ -1,0 +1,7 @@
+>> jsonPath = "/src/data/raw/demo_1901_1/"
+>> rawJson_DF = spark.read.json(jsonPath)
+>> rawJson_DF.show()
+>> tableName = "rawjson_table"
+>> rawJson_DF.CreateOrReplaceTempView(tableName)
+>> statename_DF =spark.sql("select distinct statename from rawjson_table")
+>> statename_DF.write.parquet("/warehouse/pricing")
