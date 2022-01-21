@@ -1,0 +1,67 @@
+--  OLTP - Online Transactional Processing Normalised Data Struicture
+  - Supports Day To Day Operations
+	IRCTC - Allow us to book the ticketes
+	Too Many Transactions
+	Data Involved in Each Transactions smaller size
+	
+	Analytics OLTP
+	
+	After a Year IRCTC where they can new trains
+		1 Year worth of tiockets booked for all trains which has the waiting list > 500
+		find all the tickets booked - 300 Million
+		status == waiting list
+		count of tickets > 500
+		Performance of OLTP
+		Its not doing 
+
+-- OLAP -- Online Analytical Processing
+ --   Gets data from the OLTP systems ( Source)
+ 
+ -- Quite time of the extract tickets as files and send it OLAP
+ --Predict the future
+ -- Business Grow
+ 
+ -- Datawarehousing concepts - Dimensional Modelln (or) Star Schema Design
+ -- Source data	
+		Business Descriptiors - Dimensions
+		Business Measures ----- Measures
+		
+		Database Deisgn
+		-_Efficient Storage
+		- Efficient Data Retrival
+		
+	2011 - Flat Files or Database Tables
+After 2011
+	
+{"row_id":13,
+ "Market_Center":"Kanjirappally",
+ "Arrivals_in_tonnes":"1.25",
+ "Unit_of_Arrivals":"Tonnes",
+ "Origin":"NR",
+ "Variety":"Other",
+ "Minimum_Price":"2500",
+ "Maximum_Price":"3000",
+ "Modal_Price":"2800",
+ "Unit_of_Price":"Rs/Quintal",
+ "Others":"","Pricing_date":"01/01/2019","state_name":"Kerala","market_name":"Kanjirappally","productgroup_name":"Cereals","productname":"Amphophalus"}
+ 
+ Json to BLOB
+ Stror BLOB into table
+ Convert BLOB into Tablular format ( Costly Operation Database)
+ Read The Data in normal text format
+ 
+ Limitations Database	
+	PDF
+	Images
+	Music files
+	
+	3V's Variety - Velocity - Volume
+	
+	
+	Ecommerce and 												Social Media
+	Amazon         												Facebook
+	2011														Message - Travelling to India 1st FEB 
+	                                                                     fLYSING TO iNDIA 1ST feb (MILLIONS OF MESSAGES)         (Choclate , Travel Accessoring, Book Taxi) 40 to 50 % campaign
+	Million transactions                                        
+	Json Transactional
+	

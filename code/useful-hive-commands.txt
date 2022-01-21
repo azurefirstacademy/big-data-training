@@ -1,0 +1,34 @@
+-- USEFUL HIVE COMMANDS
+
+-- Invoke Hive Session
+hive
+
+--CREATE External Table for JSON Source Data
+create external table demo1401_1.rawdata_012019 ( 
+row_id String,
+Market_Center  String,
+Arrivals_in_tonnes  String,
+Unit_of_Arrivals  String,
+Origin String,
+Variety  String,
+Minimum_Price  String,
+Maximum_Price  String,
+Modal_Prices  String,
+Unit_of_Price  String,
+Others  String,
+Pricing_date  String,
+state_name String,
+market_name String,
+productgrou_name  String,
+productname  String
+)
+ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
+LOCATION '/src/data/raw/demo_1401_1/
+
+-- Adding New JAR Files 
+ ADD JAR /tmp/data/json-udf-1.3.8-jar-with-dependencies.jar;
+ ADD JAR /tmp/data/json-serde-1.3.8-jar-with-dependencies.jar;
+ ADD JAR /usr/hdp/current/hive-client/lib/commons-httpclient-3.0.1.jar
+ 
+ -- Create table from existing Table
+ create table hivedemo_060122.stg_state_1 as select distinct statename from hivedemo_060122.rawdata_012019 ;

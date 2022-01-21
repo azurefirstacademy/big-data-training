@@ -1,0 +1,82 @@
+--Datawarehouse Design 
+
+-- History
+
+-- Online Transactional Processing Systems (OLTP) - Day Today Operations
+   -- Ecommerce Websites  
+   -- Ticket Booking Systems
+   -- Online Banking
+   -- Insurance
+   
+   Front End Interface- Back End Processing - Databases ( Normalised Design)
+   
+   -- Large Number Of Transactions - Amount of Data involved in each transaction is Small
+   -- Running Analytical Queries Affect the Performance  
+   
+   -- Analytical Queries Process Large Data But Number of Transactions are less 
+
+   
+-- Online Analytical Processing System (OLAP)
+	-- Extract Daily Transactions from OLTP System
+	-- Different Database to store these data for Analytical Purposes
+	--
+	-- Datawarehousing Design -  Dimensional Modelling
+	
+Dimensions - Data Attributes Describe the Business Functions
+
+Facts  - Measures that numerical values
+
+Business (OLTP) 
+	Tabular
+	Delimited Files
+	Structrured Data
+	
+	
+
+Social Media Evolution
+
+ Free Text Format
+	Audio
+	Video
+	
+JSON - Scalability
+
+ECOMMERCE
+ JSON - Scalability
+
+2011- Database
+Structured Data
+JSON - BLOB - TABLE 
+BLOB-JSON(utilities) - Display text data
+
+
+
+Travelling to India on 1st FEB
+Choclates - Retail
+Travel Accessories - Travel company
+Taxi - Offers
+  
+Flying India on 1st FEB
+
+New Storage And Processing Systems 
+
+
+JSON Data
+AUdio 
+Video
+PDF
+Unstructure
+
+VARIETY - Started JSON
+VELOCITY
+VOLUME
+   
+-- NEW STOREAGE SYSTEM AND PROCESSING Data	
+		-- INSIGHT
+
+DATABASE SYSTEMS LIMITATIONS
+	-- Semi Structured Data (JSON) - Additional Convertions
+	-- Monolythic (only One Server) 
+
+
+

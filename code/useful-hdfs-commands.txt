@@ -1,0 +1,20 @@
+-- HDFS Commands
+
+-- Create HDFS Directory
+hdfs dfs -mkdir -p /src/data/raw
+
+--Change HDFS Folder Permissions
+hdfs dfs -chmod -R 0777 /warehouse/tablespace/datalake
+
+-- Copy From Local Machine to HDFS Folder
+hdfs dfs -put /tmp/data/demo1401_1/CW_MW_DR_01012019.json  /src/data/raw/demo_1401_1/
+
+--Change HDFS Folder Permissions
+hdfs dfs -chmod -R 0777 /warehouse/tablespace/datalake
+
+
+-- Check HDFS File Data Distribution
+hdfs fsck hdfs:/src/data/raw/test.json -files -blocks -locations
+
+--Open HDFS file to chek data
+hdfs dfs -cat /src/data/raw/demo_1401_1/
